@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Administrador </title>
+</head>
+<body>
+    <div class="cont__volver">
+        
+        <div>
+            <a href="/gimnasio">Volver</a> 
+        </div>
+        <div>
+            <p class="acceso__txt"> Acceso Administrador</p>
+        </div>
+    </div>
+
+    <div class="cont__general__admin">
+        
+            <div>
+                <img src="../iconos/usuario.svg" alt="icono de usuario" class="usuario__icono">
+            </div>
+            <div class="cont__form__admin">
+                <form action="/gimnasio/administrador" method="POST" class="formulario">
+                    <div>
+                        <label for="user">Ingrese su usuario</label>
+                        <input type="text" name="user" id="usuario">
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="password"> Ingrese su contraseña</label>
+                        <input type="password" id="password" name="password">
+                        <span></span>
+                    </div>
+                    <button class="btn__entrar" >Acceder </button>
+                </form>
+            </div>
+        
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert !="undefined" ){ %>
+        <script>
+
+            Swal.fire({
+                title: "<%= alertTitle %>",
+                text: "<%= alertMessage %>",
+                icon: "<%= alertIcon %>",
+                showConfirmButton: "<%= showConfirmButton %>",
+                timer: "<%= timer %>"
+            }).then(() => {
+                window.location = "/<%=ruta%>"
+            })
+        </script>
+        <% } %>
+
+    <script>
+        const usuario = document.querySelector("[name=user]");
+        const password = document.querySelector("[name=password]");
+
+        const validarCampos = (e) => {
+
+                const field = e.target;
+                const valorNombre = e.target.value;
+
+
+                if (!valorNombre) {
+
+                    field.nextElementSibling.classList.add("error");
+                    field.nextElementSibling.innerHTML = "*Este campo es obligatorio"
+                } else {
+                    field.nextElementSibling.classList.remove("error");
+                    field.nextElementSibling.innerHTML = ""
+                }
+            }
+
+           usuario.addEventListener("blur", validarCampos);
+           password.addEventListener("blur", validarCampos);
+
+    </script>
+</body>
+</html>

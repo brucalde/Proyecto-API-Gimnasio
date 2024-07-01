@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Reenie+Beanie&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../loger.css">
+    <title>Gimnasio Administrador </title>
+</head>
+<body>
+
+    <div class="nav__login">
+        <img src="../../logos/LOGO-GIMNASIO-Nuevo-removebg-preview-copiasa.png" alt="logo principal" class="logo__principal">
+        <div class="cont__links__login">
+            <p class="links__login"> Administrador</p>
+            <% if(login) { %>
+                <p class="links__login" >Usuario: <strong>
+                        <%= nombre %>
+                    </strong> </p>
+                        <a href="logout" class="links__login">Cerrar Sesion</a>
+                    
+                
+            
+                <% } %>
+        </div>
+    </div>
+
+    <section class="cont__justify">
+
+        <div class="cont__menu">
+            <li><a href="./plano1">General</a></li>
+            <li><a href="./plano2">Agregar Alumno</a></li>
+            <li><a href="./plano3">Eliminar Alumno</a></li>
+        </div>
+        
+        <main class="container"></main>
+    
+    </section>
+        
+    <script>
+        const $d = document;
+        const $main = $d.querySelector("main");
+
+
+        const getHTML = (options) => {
+            let { url, success, error } = options;
+            const xhr = new XMLHttpRequest();
+
+            xhr.addEventListener("readystatechange", e => {
+                if (xhr.readyState !== 4) return;
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    let html = xhr.responseText;
+                    success(html)
+                } else {
+                    let message = xhr.statusText || "Ocurrió un error";
+                    error(`Error ${xhr.status} : ${message}`);
+                }
+            })
+
+
+            xhr.open("GET", url);
+            xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
+            xhr.send();
+        }
+
+        $d.addEventListener("DOMContentLoaded", e => {
+            getHTML({
+                url: "./plano1",
+                success: (html) => $main.innerHTML = html,
+                error: (e) => $main.innerHTML = `<b>${e}</b>`
+            })
+        })
+
+        $d.addEventListener("click", e => {
+            if (e.target.matches("li a")) {
+                e.preventDefault();
+                getHTML({
+                    url: e.target.href,
+                    success: (html) => $main.innerHTML = html,
+                    error: (e) => $main.innerHTML = `<b>${e}</b>`
+                })
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

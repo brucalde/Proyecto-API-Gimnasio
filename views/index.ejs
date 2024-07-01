@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Reenie+Beanie&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../modal.css">
+    <title>Gimnasio PLUS +</title>
+</head>
+<body>
+    <section class="conte__presentacion">
+
+        <nav class="cont__nav">
+            <div class="conte__logo">
+                <img src="../logos/LOGO-GIMNASIO-Nuevo-removebg-preview-copiasa.png" alt="logo-empresa" class="logo__principal">
+            </div>
+            <div class="cont__links">
+                <li class="links"><a href="/gimnasio" class="a__links">INICIO</a></li>
+                <li class="links"><a href="#seccion__rutinas" class="a__links">INSCRIBIRSE</a></li>
+                <li class="links"><a href="#tercer__seccion" class="a__links">QUIENES SOMOS</a></li>
+                <li class="links"><a href="/gimnasio/administrador" class="a__links">ADMINISTRADOR</a></li>
+            </div>
+        </nav>
+
+        <div class="cont__muestra">
+            <div class="cont__frases">
+                <p class="titulo__frases">ENTRENA BIEN. <br> ENTRENA EFICIENTE.</p>
+                <div class="cont__frases__dos">
+                    <p class="txt__frase">Moverte es</p> 
+                    <p><span class="typed"></span></p>
+                </div>
+            </div>
+            <div class="cont__img__fit">
+                <img src="../imagenes/FOTO-FIT-removebg-preview (1).png" alt="gente-entrenando" class="img__fit">
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <section id="seccion__rutinas">
+        <div class="cont__display__rutinas">
+            <div class="cont__ind__rutinas">
+                <div class="cont__datos__prin">
+                    <p class="num__especial">01.</p>
+                    <img src="../iconos/unico.svg" alt="icono" class="img__iconos">
+                    <p class="txt__datos">Rutina Individual</p>
+                </div>
+                <div  class="cont__txt__rutinas">
+                    <p>Te proponemos ésta opción si sueles entrenar solo, crearemos una rutina y espacio totalmente personalizado según tu objetivo. </p>
+                </div>
+            </div>
+            <div class="cont__ind__rutinas">
+                <div class="cont__datos__prin">
+                    <p class="num__especial">02.</p>
+                    <img src="../iconos/grupo.svg" alt="icono" class="img__iconos">
+                    <p class="txt__datos">Rutina para dos</p>
+                </div>
+                <div class="cont__txt__rutinas">
+                    <p>Te proponemos ésta opción si tienes algun amigo/a para entrenar, crearemos una rutina para que ambos puedan realizarla en el gimnasio PLUS+ , segun cada objetivo.</p>
+                </div>
+            </div>
+            <div class="cont__ind__rutinas">
+                <div class="cont__datos__prin">
+                    <p class="num__especial">03.</p>
+                    <img src="../iconos/correr.svg" alt="icono" class="img__iconos">
+                    <p class="txt__datos">Rutina Al aire Libre</p>
+
+                </div>
+                <div class="cont__txt__rutinas">
+                    <p>Te proponemos ésta rutina, si no sos de entrenar en gimnasio y preferis hacerlo al aire libre. Será creada con elementos que tendras disponibles en cualquier sitio al aire libre.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cont__btn">
+            <button class="btn__inscripcion" id="abridor__modal__2">INSCRIBITE</button>
+        </div>
+
+    </section>
+
+    <section id="tercer__seccion">
+
+        <div class="cont__somos">
+            <p class="txt__somos">Somos un grupo de profes , <br> comprometidos y con experiencia.</p>
+            <p class="txt__somos__des">Estaremos asesorandote desde el primer día, a partir de tus objetivos serás derivado al profesional que mejor de adapte para vos. Te ayudaremos hasta los dias que no asistas al gim. Te esperamos! </p>
+        </div>
+
+
+    </section>
+
+
+    <section class="modal">
+        <div class="modal__container">
+            <form action="/gimnasio" method="POST" class="cont__modal__form" id="cont__modal__form2">
+                <div class="cont__modal__simples">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name">
+                    <span></span>
+                </div>
+                <div class="cont__modal__simples">
+                    <label for="surname">Apellido</label>
+                    <input type="text" name="surname" id="surname">
+                    <span></span>
+                </div>
+                <div class="cont__check">
+                    <label for="dato" class="label__prin"> Ingrese su rutina</label>
+                    <input type="radio" name="opcion" id="individual" value="Individual"><label for="individual">Individual</label>
+                    <input type="radio" name="opcion" id="acompañado" value="Acompañado"><label for="acompañado"> Acompañado </label>
+                    <input type="radio" name="opcion" id="aireLibre" value="Al aire libre"><label for="aireLibre">Al aire libre</label>
+                </div>
+                <button class="btn__enviar__datos" id="btn__enviar__datos2"> Inscribirme </button>
+                        
+            </form> 
+
+
+            <a href="" class="modal__close" > Cerrar </a>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <% if(typeof alert !="undefined" ){ %>
+        <script>
+
+            Swal.fire({
+                title: "<%= alertTitle %>",
+                text: "<%= alertMessage %>",
+                icon: "<%= alertIcon %>",
+                showConfirmButton: "<%= showConfirmButton %>",
+                timer: "<%= timer %>"
+            }).then(() => {
+                window.location = "/<%=ruta%>"
+            })
+        </script>
+        <% } %>
+    <script>
+        // MODAL SCRIPT
+
+        const abrirModalDos = document.querySelector("#abridor__modal__2");
+        const modal = document.querySelector(".modal");
+        const cerrarModal = document.querySelector(".modal__close");
+
+        abrirModalDos.addEventListener("click", (e)=>{
+            e.preventDefault()
+            modal.classList.add("modal--show")
+            
+        });
+
+        cerrarModal.addEventListener("click", (e)=>{
+            e.preventDefault();
+            modal.classList.remove("modal--show");
+        });
+
+        // Para typed animacion
+
+        const typed = new Typed('.typed', {
+                strings: ['<i class="especial"> vida </i>',
+                    '<i class="especial"> salud </i>',
+                    '<i class="especial"> bienestar. </i>'
+                ],
+
+                typeSpeed: 75,
+                startDelay: 400,
+                backSpeed: 85,
+                backDelay: 2000,
+                loop: true,
+                loopCount: false,
+                showCursor: false,
+
+            });
+
+        // Validacion con BLUR
+
+        const nombre = document.querySelector("[name=name]");
+        const apellido = document.querySelector("[name=surname]");
+        const opcion = document.querySelector("[name=opcion]");
+        const btn = document.querySelector("#btn__enviar__datos2");
+
+        const validarCampos = (e) =>{
+
+                const field = e.target;
+                const valorNombre = e.target.value;
+
+
+                if (!valorNombre) {
+
+                    field.nextElementSibling.classList.add("error");
+                    field.nextElementSibling.innerHTML = "*Este campo es obligatorio";
+                    
+                } else {
+                    field.nextElementSibling.classList.remove("error");
+                    field.nextElementSibling.innerHTML = "";
+                    // btn.removeAttribute("id");
+                };
+
+                if(valorNombre !== ""){
+                    btn.removeAttribute("id")
+                }else{
+                    btn.setAttribute("id", "btn__enviar__datos2")
+                }
+            };
+
+
+        nombre.addEventListener("blur", validarCampos);
+        apellido.addEventListener("blur", validarCampos);
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../loger.css">
+    <title>Plano 2</title>
+</head>
+<body>
+    <div class="cont__señalador">
+        <p>
+            Agregar Alumno
+        </p>
+    </div>
+
+    <div>
+        <form action="/plano2" method="POST" class="cont__modal__form">
+            <div class="cont__modal__simples">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="cont__modal__simples">
+                <label for="surname">Apellido</label>
+                <input type="text" name="surname" id="surname">
+            </div>
+            <div class="cont__check">
+                <label for="dato" class="label__prin"> Ingrese rutina del Alumno</label>
+                <input type="radio" name="opcion" id="individual" value="Individual"><label for="individual">Individual</label>
+                <input type="radio" name="opcion" id="acompañado" value="Acompañado"><label for="acompañado"> Acompañado
+                </label>
+                <input type="radio" name="opcion" id="aireLibre" value="Al aire libre"><label for="aireLibre">Al aire
+                    libre</label>
+            </div>
+            <button class="btn__enviar__datos"> Inscribir Alumno </button>
+        
+        </form>
+    </div>
+</body>
+</html>

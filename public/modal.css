@@ -1,0 +1,124 @@
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111111bd;
+    display: flex;
+    font-family: "Urbanist",sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+}
+
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modal__close{
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #d61616;
+    border: 1px solid #d61616;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color .3s;
+}
+
+.modal__close:hover{
+    color: #d61616 ;
+    background-color: #fff;
+}
+
+
+/* --- MODAL FORMULARIO */
+
+.cont__modal__form{
+    display: block;
+    text-align: center;
+}
+
+.cont__modal__simples label{
+    display: block;
+    margin-top: 3%;
+    font-weight: 600;
+}
+
+.cont__modal__simples input{
+    margin-top: 2%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 85%;
+}
+
+.label__prin{
+    display: block;
+    margin-top: 6%;
+    font-weight: 600;
+}
+
+.cont__check input{
+    margin-top: 6%;
+}
+
+.btn__enviar__datos{
+    margin-top: 10%;
+    font-size: 18px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #f87c49;
+        border: 1px solid #f87c49;
+        border-radius: 8px;
+        padding: 10px;
+        transition: background-color .3s;
+}
+
+#btn__enviar__datos2{
+    pointer-events: none;
+    background-color: rgb(131, 131, 131);
+    border: rgb(131, 131, 131);
+}
+
+.btn__enviar__datos:hover{
+    color: #f87c49;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+/* Error BLUR */
+
+.error{
+    color: red;
+    display: block;
+}
+
+/* Desabilitar btn */
+
+.desabi{
+    background-color: black;
+    pointer-events: none;
+}

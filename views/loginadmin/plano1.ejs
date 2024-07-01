@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../loger.css">
+    <title>Plano 1</title>
+</head>
+<body>
+    
+    <div class="cont__señalador">
+        <p>
+            General
+        </p>
+    </div>
+
+    <div class="cont__tabla">
+        <table class="tabla__general">
+            <tr class="fila__titulos">
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Rutina</td>
+            </tr>
+
+            <% data.forEach((prod)=>{%>
+            <tr>
+               
+                <td><%=prod.id%></td>
+                <td><%=prod.nombre%></td>
+                <td><%=prod.apellido%></td>
+                <td><%=prod.rutina%></td>
+            </tr>
+            <%})%>
+        </table>
+    </div>
+
+</body>
+</html>

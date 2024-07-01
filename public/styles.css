@@ -1,0 +1,291 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.conte__presentacion{
+    max-width: 1400px;
+    height: 700px;
+    background-image: url("../fondos/Fondo-nuevo-PRIN.png");
+
+}
+
+.cont__nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont__links{
+    display: flex;
+    text-decoration: none;
+    margin-top: 75px;
+}
+
+.links{
+    list-style: none;
+    margin-left: 16px;
+}
+
+.a__links{
+    text-decoration: none;
+    color: white;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 200;
+}
+
+.titulo__frases{
+    font-size: 65px;
+    font-weight: 800;
+    background: linear-gradient(167deg, #f87c49, #DDE6E8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Anta", sans-serif;
+    
+}
+
+.cont__muestra{
+    width: 87%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont__img__fit{
+    width: 400px;
+    height: 400px;
+}
+
+.img__fit{
+    width: 400px;
+    height: 400px;
+}
+
+.txt__frase{
+    color: #fff;
+}
+
+.cont__frases__dos{
+    display: flex;
+    font-family: "Urbanist", sans-serif;
+    font-size: 23px;
+    margin-top: -10%;
+    margin-left: 2%;
+}
+
+.typed{
+    margin-left: 5px;
+    color: #fff;
+}
+
+/* Seccion rutinas */
+
+#seccion__rutinas{
+    width: 100%;
+    margin-top: 10%;
+}
+
+.cont__display__rutinas{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont__ind__rutinas{
+    max-width: 27%;
+   
+}
+
+.cont__datos__prin{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.num__especial{
+    font-size: 25px;
+    background: linear-gradient(167deg, #f87c49, #DDE6E8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Anta", sans-serif;
+        font-weight: 400;
+
+}
+
+.img__iconos{
+    margin-top: -20px;
+    width: 25px;
+}
+
+.cont__txt__rutinas{
+    flex-wrap: wrap;
+    border: 3px solid #242629;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.cont__txt__rutinas p{
+    flex-wrap: wrap;
+    padding: 4px;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.txt__datos{
+    font-family: "Reenie Beanie", cursive;
+    color: #c7623a;
+    font-size: 35px;
+}
+
+
+.cont__btn{
+    margin-left: 43%;
+    margin-top: 5%;
+}
+
+.btn__inscripcion{
+    font-family: "Urbanist", sans-serif; 
+    font-size: 25px;
+    padding: 13px;
+    border: 1px solid #DDE6E8;
+    border-radius: 8px;
+    color: #f87c49;
+    background:  #242629;
+}
+
+.btn__inscripcion:hover{
+    cursor: pointer;
+    color: #c7623a;
+}
+
+
+/* tercer seccion */
+
+#tercer__seccion{
+    margin-top: 10%;
+    background: url("../fondos/Fondo-tercer-NUEVO-modified.png");
+    width: 100%;
+    height: 650px;
+    position: absolute;
+}
+
+.cont__somos{
+    margin-top: 200px;
+    width: 90%;
+    position: relative;
+}
+
+.txt__somos{
+    font-family: "Anta", sans-serif; 
+    font-size: 45px;
+    margin-left: 10%;
+    color: #242629;
+
+}
+
+.txt__somos__des{
+    font-family:"Urbanist", sans-serif;
+    margin-left: 48%;
+}
+
+
+
+
+
+
+/* ADMINISTRADOR ----------------------- */
+
+.cont__volver{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont__volver a{
+    text-decoration: none;
+    font-family: "Urbanist", sans-serif;
+    color: #242629;
+    font-size: 16px;
+}
+
+.cont__volver a:hover{
+    color: #c7623a;
+}
+
+.acceso__txt{
+    font-family: "Urbanist", sans-serif;
+    color: #f87c49;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.cont__general__admin{
+    
+    margin-top: 5%;
+    margin-left: 35%;
+    border: 1px solid #f87c49;
+    border-radius: 10px;
+    width: 450px;
+    height: 350px;
+}
+
+
+.formulario label{
+    display: block;
+    margin-top: 5%;
+    font-family:"Urbanist", sans-serif; ;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.formulario input{
+    display: block;
+    margin-top: 3%;
+    padding: 5px;
+    border: 1px solid gray;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.cont__form__admin{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.btn__entrar{
+    font-size: 20px;
+    margin-top: 5%;
+    padding: 5px;
+    color: #fff;
+    background-color: #c7623a;
+    border: 1px solid #c7623a;
+    border-radius: 5px;
+    margin-left: 37%;
+    font-family: "Urbanist", sans-serif;
+}
+
+.btn__entrar:hover{
+    cursor: pointer;
+    color: #c7623a;
+    background-color: #fff;
+    border: 1px solid #DDE6E8;
+}
+
+.usuario__icono{
+    width: 60px;
+    margin-top: 5%;
+    margin-left: 42%;
+}
+
+
+/* Validación con BLUR */
+
+.error{
+    color: red;
+}

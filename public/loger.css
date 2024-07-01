@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 300;
+}
+
+
+/* FORMULARIO REGISTRO */
+
+.cont__form__registro{
+    width: 100%;
+    
+}
+
+.form__registro{
+    width: 30%;
+    margin-top: 10%;
+    margin-left: 35%;
+    text-align: center;
+}
+
+.form__registro label{
+    font-weight: 500;
+}
+
+.form__registro input{
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.btn__registrase{
+    padding: 10px;
+    background-color: #f87c49;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.btn__registrase:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+
+
+/* PAGINA PRINCIPAL ADMIN */
+
+.nav__login{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #242629;
+}
+
+.cont__links__login{
+    margin-right: 10px;
+}
+
+.links__login{
+    color: #fff;
+}
+
+/*  */
+
+.cont__justify{
+    display: flex;
+}
+
+.cont__menu{
+    width: 20%;
+    height: 450px;
+    background-color: #525457 ;
+}
+
+
+.cont__menu li{
+    list-style: none;
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 5%;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.cont__menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.cont__menu a:hover{
+    color: #f87c49;
+}
+
+.container{
+    width: 80%;
+}
+
+
+/* PLANO 1 --- GENERAL */
+
+.cont__señalador{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.cont__señalador p{
+    font-weight: 600;
+    font-size: 17px;
+    color: #f87c49;
+}
+
+.cont__tabla{
+    width: 97%;
+    margin: auto;
+    /* background-color: bisque; */
+}
+
+.fila__titulos{
+    width: 95%;
+    text-align: center;
+}
+
+.fila__titulos td{
+    width: 190px;
+    background-color: #f37d4e85;
+    border: 1px solid rgb(226, 226, 226);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* PLANO2 -- AGREGAR ALUMNO */
+
+.cont__modal__form {
+    display: block;
+    text-align: center;
+}
+
+.cont__modal__simples label {
+    display: block;
+    margin-top: 3%;
+    font-weight: 600;
+}
+
+.cont__modal__simples input {
+    margin-top: 2%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 50%;
+}
+
+.label__prin {
+    display: block;
+    margin-top: 3%;
+    font-weight: 600;
+}
+
+.cont__check input {
+    margin-top: 3%;
+}
+
+.btn__enviar__datos {
+    margin-top: 2%;
+    font-size: 17px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f87c49;
+    border: 1px solid #f87c49;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color .3s;
+}
+
+.btn__enviar__datos:hover {
+    color: #f87c49;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+/* PLANO3 - ELIMINAR ALUMNO */
+
+.cont__eliminar{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.label{
+    font-weight: 600;
+}
+
+.form__admin__eliminar input{
+    margin-top: 1%;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.eliminar__datos{
+    margin-top: 2%;
+    font-size: 17px;    
+    text-decoration: none;
+    color: #fff;
+    background-color: #f87c49;
+    border: 1px solid #f87c49;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color .3s;
+}
+
+.eliminar__datos:hover{
+    color: #f87c49;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+
